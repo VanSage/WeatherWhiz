@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Report</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Weather Report</h1>
+    </header>
+    <main>
+        <div id="weather">
+            <h2>Current Weather</h2>
+            <p>City: <span id="city">Your City</span></p>
+            <p>Temperature: <span id="temperature">--</span>°C</p>
+            <p>Condition: <span id="condition">--</span></p>
+            <button onclick="fetchWeather()">Get Weather</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Weather Report</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
