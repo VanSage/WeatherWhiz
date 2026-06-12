@@ -22,4 +22,4 @@ The project was developed to create a simple and responsive weather application 
 
 ## Author
 
-Vanshika Rana
+Vanshika
