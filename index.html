@@ -1,27 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Report</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Neo Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Weather Report</h1>
-    </header>
-    <main>
-        <div id="weather">
-            <h2>Current Weather</h2>
-            <p>City: <span id="city">Your City</span></p>
-            <p>Temperature: <span id="temperature">--</span>°C</p>
-            <p>Condition: <span id="condition">--</span></p>
-            <button onclick="fetchWeather()">Get Weather</button>
+  <div id="particles-js"></div>
+  <div class="container">
+    <div class="top-bar">
+      <h1>NEO WEATHER</h1>
+      <div class="search-box">
+        <input type="text" id="cityInput" placeholder="Enter city name...">
+        <button onclick="getWeather()">Search</button>
+      </div>
+    </div>
+    <div class="dashboard">
+      <div class="main-card glass">
+        <div class="weather-main">
+          <div>
+            <h2 id="city">India</h2>
+            <p id="condition">Loading...</p>
+          </div>
+          <img id="weatherIcon" src="" alt="">
         </div>
-    </main>
-    <footer>
-        <p>&copy; 2025 Weather Report</p>
-    </footer>
-    <script src="script.js"></script>
+        <h1 id="temp">--°C</h1>
+        <div class="extra-info">
+          <div>
+            <span>Feels Like</span>
+            <h3 id="feels">--°C</h3>
+          </div>
+          <div>
+            <span>Humidity</span>
+            <h3 id="humidity">--%</h3>
+          </div>
+          <div>
+            <span>Wind</span>
+            <h3 id="wind">-- km/h</h3>
+          </div>
+        </div>
+      </div>
+      <div class="side-panel">
+        <div class="card glass">
+          <h3>Pressure</h3>
+          <p id="pressure">-- mb</p>
+        </div>
+        <div class="card glass">
+          <h3>UV Index</h3>
+          <p id="uv">--</p>
+        </div>
+        <div class="card glass">
+          <h3>Visibility</h3>
+          <p id="visibility">-- km</p>
+        </div>
+        <div class="card glass">
+          <h3>Cloud</h3>
+          <p id="cloud">--%</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
